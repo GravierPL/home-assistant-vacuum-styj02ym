@@ -1,14 +1,14 @@
 {
   "domain": "miio2",
   "name": "Xiaomi miio vacuum STYJ02YM",
-  "version": "2022.3.3",
-  "documentation": "https://github.com/KrzysztofHajdamowicz/home-assistant-vacuum-styj02ym",
+  "version": "2024.03.27",
+  "documentation": "https://github.com/GravierPL/home-assistant-vacuum-styj02ym",
   "requirements": [
-    "construct==2.10.56",
-    "python-miio==0.5.12"
+    "construct==2.10.67",
+    "python-miio>=0.5.9"
   ],
   "dependencies": [],
-  "codeowners": ["@nqkdev", "@KrzysztofHajdamowicz"],
+  "codeowners": ["@nqkdev", "@KrzysztofHajdamowicz", "@GravierPL"],
   "config_flow": false,
   "iot_class": "local_polling"
 }

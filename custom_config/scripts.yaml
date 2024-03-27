@@ -1,0 +1,209 @@
+vacuum_salon:
+  alias: Odkurzanie łazienki
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_language
+      params: 2
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_mode_withroom
+      params:
+      - 0
+      - 1
+      - 1
+      - 15
+  mode: single
+vacuum_kuchnia:
+  alias: Odkurzanie sypialni
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_language
+      params: 2
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_mode_withroom
+      params:
+      - 0
+      - 1
+      - 1
+      - 14
+  mode: single
+vacuum_przedpokoj:
+  alias: Odkurzanie przedpokoju
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_language
+      params: 2
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_mode_withroom
+      params:
+      - 0
+      - 1
+      - 1
+      - 13
+  mode: single
+vacuum_lazienka:
+  alias: Odkurzanie salonu
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_language
+      params: 2
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_mode_withroom
+      params:
+      - 0
+      - 1
+      - 1
+      - 12
+  mode: single
+vacuum_gabinet:
+  alias: Odkurzanie gabinetu
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_language
+      params: 2
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_mode_withroom
+      params:
+      - 0
+      - 1
+      - 1
+      - 11
+vacuum_sypialnia:
+  alias: Odkurzanie kuchni
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_language
+      params: 2
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.syzyf
+      command: set_mode_withroom
+      params:
+      - 0
+      - 1
+      - 1
+      - 10
+  mode: single
+vacuum_water_grade_low:
+  alias: Ilość wody niska
+  sequence:
+  - data:
+      command: set_suction
+      params: 11
+    entity_id: vacuum.syzyf
+    service: vacuum.send_command
+vacuum_water_grade_medium:
+  alias: Ilość wody średnia
+  sequence:
+  - data:
+      command: set_suction
+      params: 12
+    entity_id: vacuum.syzyf
+    service: vacuum.send_command
+vacuum_water_grade_high:
+  alias: Ilość wody wysoka
+  sequence:
+  - data:
+      command: set_suction
+      params: 13
+    entity_id: vacuum.syzyf
+    service: vacuum.send_command
+vacuum_set_silent:
+  sequence:
+  - data:
+      fan_speed: Silent
+    entity_id: vacuum.syzyf
+    service: vacuum.set_fan_speed
+vacuum_set_standard:
+  sequence:
+  - data:
+      fan_speed: Standard
+    entity_id: vacuum.syzyf
+    service: vacuum.set_fan_speed
+vacuum_set_medium:
+  sequence:
+  - data:
+      fan_speed: Medium
+    entity_id: vacuum.syzyf
+    service: vacuum.set_fan_speed
+vacuum_set_turbo:
+  sequence:
+  - data:
+      fan_speed: Turbo
+    entity_id: vacuum.syzyf
+    service: vacuum.set_fan_speed
+vacuum_set_light_on:
+  sequence:
+  - data:
+      command: set_light
+      params: 1
+    entity_id: vacuum.syzyf
+    service: vacuum.send_command
+vacuum_set_light_off:
+  sequence:
+  - data:
+      command: set_light
+      params: 0
+    service: vacuum.send_command
+    target:
+      entity_id: vacuum.syzyf
+vacuum_set_mop_0:
+  sequence:
+  - data:
+      command: set_mop
+      params: 0
+    entity_id: vacuum.syzyf
+    service: vacuum.send_command
+vacuum_set_mop_1:
+  sequence:
+  - data:
+      command: set_sound
+      params: 1
+    entity_id: vacuum.syzyf
+    service: vacuum.send_command
+vacuum_set_mop_2:
+  sequence:
+  - data:
+      command: set_mop
+      params: 2
+    entity_id: vacuum.syzyf
+    service: vacuum.send_command
+vacuum_set_vol_0:
+  sequence:
+  - data:
+      command: set_voice
+      params:
+      - 0
+      - 0
+    entity_id: vacuum.syzyf
+    service: vacuum.send_command
+vacuum_set_vol_100:
+  sequence:
+  - data:
+      command: set_voice
+      params:
+      - 1
+      - 10
+    entity_id: vacuum.syzyf
+    service: vacuum.send_command

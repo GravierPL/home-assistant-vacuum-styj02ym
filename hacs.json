@@ -1,9 +1,9 @@
 
 {
     "name": "vacuum-styj02ym",
-    "country": ["FR", "PL"],
+    "country": ["PL"],
     "domains": ["vacuum"],
-    "homeassistant": "2021.6.0",
+    "homeassistant": "2024.3.0",
     "iot_class": "local_poll",
     "zip_release": true,
     "filename": "miio2.zip"
